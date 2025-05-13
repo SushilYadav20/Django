@@ -155,3 +155,6 @@ def delete_todo(request,id):
         update_data.delete()
         message='data deleted'
         return redirect('/show_todo/?message=datadeleted')
+    
+def vinay(request):
+    return redirect('/user_blog/')
