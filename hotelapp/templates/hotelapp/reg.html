@@ -1,0 +1,54 @@
+{% extends 'hotelapp/base.html'%}
+{% load static %}
+
+
+
+{%block head%}  
+{%block style  %}
+
+    
+<style>
+    .input{
+    color: darkgreen;
+    }
+</style>
+{%endblock style %}
+
+{%endblock head%}
+    {%block title%} Registration {%endblock title%}
+    
+   
+
+{%block content %} 
+<div >
+    <h1 class="text-red-600 text-center font-extrabold text-[30px] ">Registration</h1>
+   
+<div class="text-center bg-red-400 mt-4" >
+    <form action="" method="post">
+        {% csrf_token %}
+        Firstname :
+        <input type="text"  name="fname" id="fname"  class="input mt-2">
+        <br><br>
+        Lastname :
+        <input type="text" name="lname" id="lname" class="input">
+        <br><br>
+        username :
+        <input type="text" name="username" id="username" class="input">
+        <br><br>
+        Password :
+        <input type="password" name="password" id="password" class="input">
+        <br><br>
+        confirm_password:
+        <input type="password" name="confirm_password" id="confirm_password" >
+        <br><br>
+        email :  
+        <input type="email" name="email" id="email" class="input">
+        <br>
+        <br>
+        <input type="submit" value="Submit" class="text-white bg-green-600 w-[110px] rounded-lg mb-2">
+        
+    </form>
+</div>
+</div>
+
+    {%endblock content%}

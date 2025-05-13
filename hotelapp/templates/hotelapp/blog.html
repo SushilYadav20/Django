@@ -1,0 +1,30 @@
+{% extends 'hotelapp/base.html' %}
+
+{% block title %} blog {% endblock title %}
+
+{% block content %}
+
+<h1 class="text-center text-red-600  font-extrabold text-[30px] mt-3">Create blog</h1>
+
+<div class="bg-red-300 text-center mt-2">
+    <form action="" method="post">
+        {% csrf_token %}
+        Title:
+        <input type="text" name="title" id="title" class="input mt-2"> <br><br>
+        Desc:
+        <textarea name="des" id="des" rows="5" cols="50"></textarea> <br><br>
+        Status:
+        <select name="status" id="status">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+        <br><br>
+        Contact:
+        <input type="text" name="mobile" id="mobile"> <br><br>
+        <button type="submit" class="bg-green-600 w-[110px] rounded-lg mb-2">save</button>
+
+        
+    </form>
+</div>
+
+{% endblock content %}
